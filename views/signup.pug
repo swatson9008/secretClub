@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Sign Up
+  body
+    h1 Sign Up
+
+    // Display error messages if there are any
+    if errors
+      ul
+        each error in errors
+          li= error
+
+    form(action='/signup', method='post')
+      label(for='username') Username:
+      input(type='text', name='username', required='required')
+      br
+      label(for='password') Password:
+      input(type='password', name='password', required='required')
+      br
+      label(for='confirmPassword') Confirm Password:
+      input(type='password', name='confirmPassword', required='required')
+      br
+      button(type='submit') Sign Up
+
+    p Already have an account? 
+      a(href='/login') Log In
+
+    // Add any additional content or styling as needed

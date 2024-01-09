@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Enter Passcode
+  body
+    h1 Enter Passcode
+
+    // Display error message if there is any
+    if error
+      p.error= error
+
+    p The passcode is the sum of 1 + 2 + 3
+
+    form(action='/enter-passcode', method='post')
+      label(for='passcode') Passcode:
+      input(type='text', name='passcode', required='required')
+      br
+      button(type='submit') Submit Passcode

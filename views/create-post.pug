@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Create Post
+  body
+    h1 Create a New Post
+
+    if user
+      // If the user is logged in, display the post creation form
+      form(action='/posts/create', method='post')
+        label(for='title') Title:
+        input(type='text', name='title', required='required')
+        br
+        label(for='text') Text:
+        textarea(name='text', required='required')
+        br
+        button(type='submit') Create Post
+    else
+      // If the user is not logged in, prompt them to log in
+      p Please log in to create a post.
+      a(href='/login') Log In
+
+    // Add any additional content or styling as needed
